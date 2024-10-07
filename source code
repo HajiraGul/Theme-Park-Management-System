@@ -1,0 +1,58 @@
+#include"ThemePark.h"
+#include<iostream>
+using namespace std;
+int main()
+{
+    ThemePark T;
+    int choice;
+    T.ReadFromFile();
+    do
+    {
+        cout<<endl<<"*******THEME PARK MANAGEMENT SYSTEM*******"<<endl;
+        cout<<"\t"<<"\t"<<"MENU"<<endl;
+        cout<<"1.Display Information of All Attractions"<<endl;
+        cout<<"2.Find Particular Attraction "<<endl;
+        cout<<"3.Disply Information of Cheapest Attraction"<<endl;
+        cout<<"4.Display Information of Attraction with Maximum Seat Capacity"<<endl;
+        cout<<"5.Display Information of Safe Attractions"<<endl;
+        cout<<"6.Generate Timing Schedule of all Attractions"<<endl;
+        cout<<"7. Average Price Per Attraction"<<endl;
+        cout<<"8.Check Availability of Attraction in Theme Park"<<endl;
+        cout<<"9.Purchase Ticket of an Attraction"<<endl;
+        cout<<"10.Display Information of Attractions with Same Price"<<endl;
+        cout<<"11.Increase or Decrease Price of an Attraction"<<endl;
+        cout<<"12.Update Information"<<endl;
+        cout<<"13.Write to new file"<<endl;
+        cout<<"14.Exit"<<endl;
+        cout<<"Enter Choice: ";
+        cin>>choice;
+        if(choice==1)
+        T.DisplayAttractions();
+        else if(choice==2)      
+        T.FindAttraction();
+        else if(choice==3)
+        T.CheapAttraction();
+        else if(choice==4)
+        T.MaxSeatattraction();
+        else if(choice==5)
+        T.SafeAttraction();
+        else if(choice==6)
+        T.TimingSchedule();
+        else if(choice==7)
+        T.ViewStatistics();
+        else if(choice==8)
+        T.Availability();
+        else if(choice==9)
+        T.PurchaseTicket();
+        else if(choice==10)
+        T.DisplayAttractionsWithSamePrice();
+        else if(choice==11)
+        T.UpdatePrice();
+        else if (choice==12)
+        T.UpdateInfo();
+        else if(choice==13)
+        T.WriteToFile();
+    }
+    while(choice!=14);
+    cout<<endl<<"*******THANK YOU FOR USING THEME PARK MANAGEMENT SYSTEM******"<<endl;
+}
